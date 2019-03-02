@@ -1,6 +1,8 @@
 package hundreddaysofcode.chucknorrisjokes
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -11,13 +13,15 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
     val colors = listOf("#CDDC39", "#FFEB3B", "#673AB7", "#2196F3",
             "#F44336", "#E91E63", "#FF5722")
 
-    var currentColor: String = ""
+    var currentColor = ""
+    var url = ""
 
     val jokeTextView by lazy { findViewById<TextView>(R.id.joke_text) }
     val background by lazy { findViewById<ConstraintLayout>(R.id.constraint_layout) }
@@ -34,7 +38,8 @@ class MainActivity : AppCompatActivity() {
         override fun onResponse(call: Call<Joke>, response: Response<Joke>) {
             if (!response.isSuccessful) return
 
-            val jokeText = response.body().toString()
+            val jokeText = response.body()?.value ?: "ERROR"
+            url = response.body()?.url ?: "_blank"
             jokeTextView.text = jokeText
             jokeTextView.setTextColor(Color.BLACK)
 
@@ -49,6 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         val retrofit = Retrofit.Builder()
                 .baseUrl("https://api.chucknorris.io")
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
         val jokesApi = retrofit.create(JokesApi::class.java)
@@ -56,6 +62,13 @@ class MainActivity : AppCompatActivity() {
 
         refreshLayout.setOnRefreshListener {
             jokesApi.getJoke().enqueue(callback)
+            refreshLayout.isRefreshing = false
+        }
+
+        background.setOnLongClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(browserIntent)
+            true
         }
     }
 
