@@ -1,19 +1,13 @@
 package hundreddaysofcode.roomviewmodel
 
 import android.app.Application
-import android.arch.lifecycle.LiveData
 import android.support.annotation.WorkerThread
 
 class NoteRepository(application: Application) {
 
-    val _noteDao: NoteDao
-    val _allNotes: LiveData<List<Note>>
-
-    init {
-        val database = NoteDatabase.getInstance(application)
-        _noteDao = database.noteDao()
-        _allNotes = _noteDao.getAllNotes()
-    }
+    private val database = NoteDatabase.getInstance(application)
+    private val _noteDao = database.noteDao()
+    private val _allNotes = _noteDao.getAllNotes()
 
     @WorkerThread
     fun insert(note: Note) {

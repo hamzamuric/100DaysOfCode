@@ -13,11 +13,11 @@ abstract class NoteDatabase : RoomDatabase() {
     abstract fun noteDao(): NoteDao
 
     companion object {
-        lateinit var instance: NoteDatabase
+        private lateinit var instance: NoteDatabase
 
         fun getInstance(context: Context): NoteDatabase {
             synchronized(this) {
-                if (instance == null) {
+                if (!::instance.isInitialized) {
                     instance = Room.databaseBuilder(context.applicationContext,
                         NoteDatabase::class.java, "note_database")
                         .fallbackToDestructiveMigration()
@@ -28,7 +28,7 @@ abstract class NoteDatabase : RoomDatabase() {
             }
         }
 
-        val roomCallback = object : RoomDatabase.Callback() {
+        private val roomCallback = object : RoomDatabase.Callback() {
 
             @WorkerThread
             override fun onCreate(db: SupportSQLiteDatabase) {
