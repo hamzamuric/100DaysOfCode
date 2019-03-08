@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         noteViewModel = ViewModelProviders.of(this).get(NoteViewModel::class.java)
         noteViewModel.getAllNotes().observe(this, Observer { notes ->
             if (notes != null)
-                adapter.notes = notes
+                adapter.submitList(notes)
         })
 
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             ) = false
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                noteViewModel.delete(adapter.notes[viewHolder.adapterPosition])
+                noteViewModel.delete(adapter.getNoteAt(viewHolder.adapterPosition))
                 this@MainActivity.toast("Note deleted")
             }
         }).attachToRecyclerView(recyclerView)

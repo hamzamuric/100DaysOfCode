@@ -1,18 +1,25 @@
 package hundreddaysofcode.roomviewmodel
 
+import android.support.v7.recyclerview.extensions.ListAdapter
+import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
+val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Note>() {
 
-    var notes: List<Note> = emptyList()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    override fun areItemsTheSame(old: Note, new: Note) =
+        old.id == new.id
+
+    override fun areContentsTheSame(old: Note, new: Note) =
+        old.title == new.title &&
+        old.description == new.description &&
+        old.priority == new.priority
+}
+
+class NoteAdapter : ListAdapter<Note, NoteAdapter.NoteHolder>(DIFF_CALLBACK) {
 
     var onClickListener: ((Note) -> Unit)? = null
 
@@ -22,14 +29,15 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
     }
 
     override fun onBindViewHolder(holder: NoteHolder, position: Int) {
+        val currentNote = getItem(position)
         holder.apply {
-            textViewTitle.text = notes[position].title
-            textViewDescription.text = notes[position].description
-            textViewPriority.text = notes[position].priority.toString()
+            textViewTitle.text = currentNote.title
+            textViewDescription.text = currentNote.description
+            textViewPriority.text = currentNote.priority.toString()
         }
     }
 
-    override fun getItemCount() = notes.size
+    fun getNoteAt(position: Int) = getItem(position)
 
     inner class NoteHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewTitle = itemView.findViewById<TextView>(R.id.text_view_title)
@@ -39,7 +47,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
         init {
             itemView.setOnClickListener {
                 if (adapterPosition != RecyclerView.NO_POSITION)
-                    onClickListener?.invoke(notes[adapterPosition])
+                    onClickListener?.invoke(getItem(adapterPosition))
             }
         }
     }
