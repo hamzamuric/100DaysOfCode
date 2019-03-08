@@ -8,13 +8,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
 import android.widget.NumberPicker
-import android.widget.Toast
 
 const val EXTRA_TITLE = "hundreddaysofcode.roomviewmodel.EXTRA_TITLE"
 const val EXTRA_DESCRIPTION = "hundreddaysofcode.roomviewmodel.EXTRA_DESCRIPTION"
 const val EXTRA_PRIORITY = "hundreddaysofcode.roomviewmodel.EXTRA_PRIORITY"
+const val EXTRA_ID = "hundreddaysofcode.roomviewmodel.EXTRA_ID"
 
-class AddNoteActivity : AppCompatActivity() {
+class AddEditNoteActivity : AppCompatActivity() {
 
     val editTextTitle by lazy { findViewById<EditText>(R.id.edit_text_title) }
     val editTextDescription by lazy { findViewById<EditText>(R.id.edit_text_description) }
@@ -28,7 +28,15 @@ class AddNoteActivity : AppCompatActivity() {
         numberPickerPriority.maxValue = 10
 
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close)
-        title = "Add Note"
+
+        if (intent.hasExtra(EXTRA_ID)) {
+            title = "Edit Note"
+            editTextTitle.setText(intent.getStringExtra(EXTRA_TITLE))
+            editTextDescription.setText(intent.getStringExtra(EXTRA_DESCRIPTION))
+            numberPickerPriority.value = intent.getIntExtra(EXTRA_PRIORITY, 1)
+        } else {
+            title = "Add Note"
+        }
     }
 
     private fun saveNote() {
@@ -37,7 +45,7 @@ class AddNoteActivity : AppCompatActivity() {
         val priority = numberPickerPriority.value
 
         if (TextUtils.isEmpty(title) || TextUtils.isEmpty(description)) {
-            Toast.makeText(this, "Please insert a title and description", Toast.LENGTH_SHORT).show()
+            toast("Please insert a title and description")
             return
         }
 
@@ -45,6 +53,9 @@ class AddNoteActivity : AppCompatActivity() {
             putExtra(EXTRA_TITLE, title)
             putExtra(EXTRA_DESCRIPTION, description)
             putExtra(EXTRA_PRIORITY, priority)
+
+            val id = intent.getIntExtra(EXTRA_ID, -1)
+            if (id != -1) putExtra(EXTRA_ID, id)
         }
 
         setResult(RESULT_OK, data)
@@ -53,7 +64,7 @@ class AddNoteActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.add_note_menu, menu)
-        return super.onCreateOptionsMenu(menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem?) = when (item?.itemId) {

@@ -14,6 +14,8 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
             notifyDataSetChanged()
         }
 
+    var onClickListener: ((Note) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.note_item, parent, false)
         return NoteHolder(itemView)
@@ -29,9 +31,16 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteHolder>() {
 
     override fun getItemCount() = notes.size
 
-    class NoteHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class NoteHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val textViewTitle = itemView.findViewById<TextView>(R.id.text_view_title)
         val textViewDescription = itemView.findViewById<TextView>(R.id.text_view_description)
         val textViewPriority = itemView.findViewById<TextView>(R.id.text_view_priority)
+
+        init {
+            itemView.setOnClickListener {
+                if (adapterPosition != RecyclerView.NO_POSITION)
+                    onClickListener?.invoke(notes[adapterPosition])
+            }
+        }
     }
 }
