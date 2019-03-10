@@ -1,7 +1,10 @@
-package hundreddaysofcode.dependencyinjection
+package hundreddaysofcode.dependencyinjection.dagger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import hundreddaysofcode.dependencyinjection.DaggerCarComponent
+import hundreddaysofcode.dependencyinjection.R
+import hundreddaysofcode.dependencyinjection.car.Car
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {

@@ -1,0 +1,3 @@
+package hundreddaysofcode.dependencyinjection.car
+
+class Rims
