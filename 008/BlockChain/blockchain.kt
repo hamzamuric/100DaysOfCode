@@ -19,24 +19,20 @@ class Block(val data: BlockData, val previousHash: String) {
     val timestamp: Long = Date().time
     val hash: String = calculateHash()
 
-    fun calculateHash() = sha256(previousHash + timestamp.toString() + 
-data)
+    fun calculateHash() = sha256(previousHash + timestamp.toString() + data)
 
     override fun toString() = """
 
-        ++================================ BLOCK 
-================================++
+        ++================================ BLOCK ================================++
         ||prev: $previousHash ||
         ||hash: $hash ||
-        
-++=======================================================================++
+        ++=======================================================================++
 
     """.trimIndent()
 }
 
 class BlockChain {
-    val chain = mutableListOf(Block(BlockData("GENESIS"), 
-"0".repeat(64)))
+    val chain = mutableListOf(Block(BlockData("GENESIS"), "0".repeat(64)))
 
     fun add(data: BlockData) {
         chain += Block(data, chain.last().hash)
@@ -67,6 +63,5 @@ fun main() {
     blockChain.add(BlockData("Hello"))
     blockChain.chain.forEach(::println)
 
-    println("BlockChain is ${if (blockChain.isChainValid()) "" else "not 
-"}valid")
+    println("BlockChain is ${if (blockChain.isChainValid()) "" else "not "}valid")
 }
