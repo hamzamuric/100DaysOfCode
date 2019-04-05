@@ -1,0 +1,6 @@
+1. Anes Hujevic, 1200, False
+2. Hamza Muric, 350, True
+3. Samra Camic, 240, False
+4. Dzenan Aljusevic, 1500, True
+5. Melisa Hot, 1100, False
+6. Hazbija Drazanin, 550, True
