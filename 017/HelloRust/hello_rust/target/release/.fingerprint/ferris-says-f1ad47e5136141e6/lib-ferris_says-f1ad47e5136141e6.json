@@ -1,1 +1,0 @@
-{"rustc":18321205956227587961,"features":"[]","target":7832126286037680923,"profile":5060393583489210841,"path":4042907862454446507,"deps":[["clap v2.33.0","clap",8565424619222869945],["error-chain v0.10.0","error_chain",7729275971926442674],["smallvec v0.4.5","smallvec",12367481059660515566]],"local":[{"Precalculated":"0.1.1"}],"rustflags":[],"edition":"Edition2015"}

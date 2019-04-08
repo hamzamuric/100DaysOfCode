@@ -1,1 +1,0 @@
-{"rustc":18321205956227587961,"features":"[\"consoleapi\", \"dbghelp\", \"errhandlingapi\", \"minwinbase\", \"minwindef\", \"processenv\", \"processthreadsapi\", \"winbase\", \"winnt\"]","target":4944179213620976468,"profile":11870183705523825133,"path":15716859419624481544,"deps":[],"local":[{"Precalculated":"0.3.7"}],"rustflags":[],"edition":"Edition2015"}
