@@ -1,0 +1,1 @@
+{"rustc":18321205956227587961,"features":"[]","target":7916569183578462555,"profile":116202214829406216,"path":1036222786711178230,"deps":[["ferris-says v0.1.1","ferris_says",8638233648629285375]],"local":[{"MtimeBased":[[1554757428,580511300],".fingerprint\\hello-rust-3a690034f315a6db\\dep-test-bin-hello_rust-3a690034f315a6db"]}],"rustflags":[],"edition":"Edition2018"}
