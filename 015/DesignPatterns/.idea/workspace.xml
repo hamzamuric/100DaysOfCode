@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2a1647e-bc58-4987-9ec2-2ab33f53a635" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/META-INF/DesignPatterns.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/hundreddaysofcode/iterator/DiscJockey.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/hundreddaysofcode/iterator/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/hundreddaysofcode/iterator/SongInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/hundreddaysofcode/iterator/SongIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/hundreddaysofcode/iterator/SongsOfThe70s.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/hundreddaysofcode/iterator/SongsOfThe80s.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DesignPatterns/hundreddaysofcode/iterator/SongsOfThe90s.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/iterator/DiscJockey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/iterator/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe70s.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe80s.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe90s.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/composite/DiscJockey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/composite/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/composite/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/composite/SongComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hundreddaysofcode/composite/SongGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,87 +20,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongIterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe70s.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#801#802#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe80s.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#743#744#0" expanded="true" />
-                <element signature="e#774#775#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe90s.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/DiscJockey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Singleton" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -134,11 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/hundreddaysofcode/prototype/Animal.java" />
-        <option value="$PROJECT_DIR$/src/hundreddaysofcode/prototype/Sheep.java" />
-        <option value="$PROJECT_DIR$/src/hundreddaysofcode/prototype/CloneFactory.java" />
-        <option value="$PROJECT_DIR$/src/hundreddaysofcode/prototype/Main.java" />
-        <option value="$PROJECT_DIR$/src/hundreddaysofcode/decorator/Pizza.java" />
         <option value="$PROJECT_DIR$/src/hundreddaysofcode/decorator/PlainPizza.java" />
         <option value="$PROJECT_DIR$/src/hundreddaysofcode/decorator/ToppingDecorator.java" />
         <option value="$PROJECT_DIR$/src/hundreddaysofcode/decorator/Mozzarella.java" />
@@ -185,6 +97,11 @@
         <option value="$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe80s.java" />
         <option value="$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe90s.java" />
         <option value="$PROJECT_DIR$/src/hundreddaysofcode/iterator/DiscJockey.java" />
+        <option value="$PROJECT_DIR$/src/hundreddaysofcode/composite/SongComponent.java" />
+        <option value="$PROJECT_DIR$/src/hundreddaysofcode/composite/SongGroup.java" />
+        <option value="$PROJECT_DIR$/src/hundreddaysofcode/composite/Song.java" />
+        <option value="$PROJECT_DIR$/src/hundreddaysofcode/composite/DiscJockey.java" />
+        <option value="$PROJECT_DIR$/src/hundreddaysofcode/composite/Main.java" />
       </list>
     </option>
   </component>
@@ -202,7 +119,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,17 +137,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="hundreddaysofcode" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DesignPatterns" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DesignPatterns" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="hundreddaysofcode" type="462c0819:PsiDirectoryNode" />
-              <item name="iterator" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hundreddaysofcode.template_method.Main" />
       <module name="DesignPatterns" />
@@ -292,12 +202,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hundreddaysofcode.adapter.Main" />
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hundreddaysofcode.composite.Main" />
       <module name="DesignPatterns" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hundreddaysofcode.adapter.*" />
+          <option name="PATTERN" value="hundreddaysofcode.composite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -332,19 +242,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (4)" />
       <item itemvalue="Application.Main (5)" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.Main (3)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (5)" />
-        <item itemvalue="Application.Main (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -370,16 +280,17 @@
       <workItem from="1554330223930" duration="1078000" />
       <workItem from="1554585124125" duration="1576000" />
       <workItem from="1554673132574" duration="2717000" />
+      <workItem from="1555016862810" duration="2096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30772000" />
+    <option name="totallyTimeSpent" value="32868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22087745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22390318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -409,97 +320,11 @@
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19621213" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43739837" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32686085" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3284553" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/builder/OldRobotBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/prototype/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/prototype/Sheep.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/prototype/CloneFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/prototype/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/decorator/Pizza.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -934,10 +759,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/RadioStation.java">
+    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/RadioStation.java" />
+    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        <state relative-caret-position="198">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -950,7 +776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe70s.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="486">
           <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -962,19 +788,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe80s.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
+        <state relative-caret-position="486">
           <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#774#775#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/SongsOfThe90s.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state relative-caret-position="504">
           <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -986,7 +810,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/DiscJockey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
+        <state relative-caret-position="1080">
           <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -994,10 +818,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/iterator/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/composite/SongComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="396">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="e#129#130#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/composite/SongGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/composite/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="108" selection-start-line="27" selection-start-column="108" selection-end-line="27" selection-end-column="108" />
+          <folding>
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/composite/DiscJockey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#229#230#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hundreddaysofcode/composite/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
