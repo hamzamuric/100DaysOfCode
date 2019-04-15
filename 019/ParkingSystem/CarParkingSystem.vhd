@@ -1,7 +1,5 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
---use IEEE.NUMERIC_STD.ALL;
---use UNISIM.VComponents.all;
 
 entity CarParkingSystem is
 	port ( FRONT, BACK : in std_logic; -- senzori
