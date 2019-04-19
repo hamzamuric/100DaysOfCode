@@ -1,0 +1,9 @@
+[package]
+name = "gtk"
+version = "0.1.0"
+authors = ["hamza"]
+edition = "2018"
+
+[dependencies.gtk]
+version = "0.6.0"
+features = ["v3_16"]
