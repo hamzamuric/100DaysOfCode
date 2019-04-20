@@ -1,3 +1,5 @@
+#include "list.h"
+
 void append(list *l, void *data)
 {
 	if (is_empty(l))

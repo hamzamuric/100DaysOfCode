@@ -2,7 +2,7 @@
 #define LIST_H
 
 #include <stdlib.h>
-#include <boolstd.h>
+#include <stdbool.h>
 
 typedef struct node {
 	void *data;
