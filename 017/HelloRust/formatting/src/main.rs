@@ -10,8 +10,8 @@ struct Color {
 impl Display for Color {
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
         let rgb: u32 = ((self.red as u32) << 16) +
-                           ((self.green as u32) << 8) +
-                           (self.blue as u32);
+                       ((self.green as u32) << 8) +
+                       (self.blue as u32);
         write!(f, "RGB ({}, {}, {}) 0x{:06X}", self.red, self.green, self.blue, rgb)
     }
 }
