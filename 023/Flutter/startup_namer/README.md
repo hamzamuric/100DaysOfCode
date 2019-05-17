@@ -1,5 +1,5 @@
 # Startup Namer
 
-![screenshots/home_page.png](Home Page)
+<img src="screenshots/home_page.png" alt="Home Page" width="300" />
 
-![screenshots/saved_suggestions.png](Home Page)
+<img src="screenshots/saved_sugesstions.png" alt="Home Page" width="300" />
